@@ -68,17 +68,17 @@ if __name__ == "__main__":
     # TASK 1
     with open('persons.json', encoding='utf8') as persons:
         persons_data = json.load(persons)
-        
-
-    # for person in persons_data['results'][:2]:
-    #     p = Person(gender=person['gender'], name=person['name'], location=person['location'], email=person['email'], 
-    #                 login=person['login'], dob=person['dob'], registered=person['registered'], phone=person['phone'],
-    #                 cell=person['cell'], id_=person['id'], picture=person['picture'], nat=person['nat'])
 
 
-    #     p.count_dob = p.count_days()
-    #     p.phone = p.clean_number(p.phone)
-    #     p.cell = p.clean_number(p.cell)
-    #     p.picture = None
-    #     # p.login['password'] = base64.b64encode(p.login['password'].encode('utf-8'))
-    #     p.save()
+    for person in persons_data['results'][:2]:
+        p = Person(gender=person['gender'], name=person['name'], location=person['location'], email=person['email'], 
+                    login=person['login'], dob=person['dob'], registered=person['registered'], phone=person['phone'],
+                    cell=person['cell'], id_=person['id'], picture=person['picture'], nat=person['nat'])
+
+
+        p.count_dob = p.count_days()
+        p.phone = p.clean_number(p.phone)
+        p.cell = p.clean_number(p.cell)
+        p.picture = None
+        # p.login['password'] = base64.b64encode(p.login['password'].encode('utf-8'))
+        p.save()
