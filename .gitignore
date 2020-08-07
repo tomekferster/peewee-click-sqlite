@@ -4,7 +4,3 @@ Scripts/
 pyvenv.cfg
 __pycache__/
 test.py
-
-script.py
-setup.py
-script.egg-info/
