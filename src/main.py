@@ -147,7 +147,7 @@ def create_populate_table():
     # CHOOSE IF YOU WANT TO LOAD THE DATA FROM FILE OR API
     persons = json_or_API()
 
-    print("Wait until you get a notification!")
+    print("Wait until you get a notification! This may take a while...")
 
     # POPULATE THE DB
     for person in persons['results']:
