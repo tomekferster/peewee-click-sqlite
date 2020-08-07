@@ -3,4 +3,5 @@ Lib/
 Scripts/
 pyvenv.cfg
 __pycache__/
+persons.sqlite3
 test.py
