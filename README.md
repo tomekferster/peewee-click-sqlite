@@ -20,7 +20,7 @@ dane zostały rozdzielone na większą ilość tabel.
 
 2. Aby skorzystać z komend skryptu, w cmd należy wpisać *script.py* oraz nazwę komendy i jej argument lub opcję.
 Dostępne komendy :
-*   average-age             (opcja '--gender', default='all')
+*   average-age<pre>             </pre>(opcja '--gender', default='all')
 *   most-common-cities      (argument 'number', default=1)
 *   most-common-passwords   (argument 'number', default=1)
 *   most-secure-password    (brak argumentów i opcji)
