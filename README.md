@@ -20,12 +20,12 @@ dane zostały rozdzielone na większą ilość tabel.
 
 2. Aby skorzystać z komend skryptu, w cmd należy wpisać *script.py* oraz nazwę komendy i jej argument lub opcję.
 Dostępne komendy :
-*   average-age &ensp;&ensp;&ensp;&ensp;&ensp;(opcja '--gender', default='all')
-*   most-common-cities&ensp;&ensp;(argument 'number', default=1)
-*   most-common-passwords&ensp;(argument 'number', default=1)
-*   most-secure-password&ensp;(brak argumentów i opcji)
-*   people-by-dob-range&ensp;&ensp;(user prompt)
-*   percent-by-gender&ensp;&ensp;(wymagana opcja '--gender')
+*   average-age             (opcja '--gender', default='all')
+*   most-common-cities      (argument 'number', default=1)
+*   most-common-passwords   (argument 'number', default=1)
+*   most-secure-password    (brak argumentów i opcji)
+*   people-by-dob-range     (user prompt)
+*   percent-by-gender       (wymagana opcja '--gender')
 
 W razie problemów z jakąkolwiek z komend, należy w cmd wprowadzić *script.py* <nazwa_komendy> --help
 
