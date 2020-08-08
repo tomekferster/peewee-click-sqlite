@@ -18,7 +18,9 @@ def cli():
 
 
 @cli.command()
-@click.argument('gender', default='all')
+@click.option('--gender',
+              type=click.Choice(['all', 'female', 'male'], case_sensitive=False),
+              help="Specify gender", default='all', show_default=True)
 def average_age(gender):
     """
     Specify gender to get the average age
@@ -53,6 +55,10 @@ def most_common_cities(number):
             city_count[location.city] = 1
 
     most_popular = sorted(city_count.items(), key=lambda x: x[1], reverse=True)
+    
+    if number > locations.count():
+        print("You exceeded the maximum number of records available. The maximum will be displayed:")
+        number = locations.count()
 
     for index in range(number):
         city, count = most_popular[index]
@@ -75,6 +81,10 @@ def most_common_passwords(number):
             password_count[login.password] = 1
 
     most_popular = sorted(password_count.items(), key=lambda x: x[1], reverse=True)
+
+    if number > logins.count():
+        print("You exceeded the maximum number of records available. The maximum will be displayed:")
+        number = logins.count()
 
     for index in range(number):
         password, count = most_popular[index]
@@ -158,7 +168,9 @@ def people_by_dob_range():
 
 
 @cli.command()
-@click.argument('gender')
+@click.option('--gender',
+              type=click.Choice(['female', 'male'], case_sensitive=False), 
+              help="Specify gender", required=True)
 def percent_by_gender(gender):
     """
     Get the percentage of the specified gender in the whole community
