@@ -10,7 +10,7 @@ pip install -r requirements.txt
 1. Aby załadować dane do bazy danych, należy uruchomić w konsoli moduł *main.py*. Zostaniemy zapytani o to czy
 chcemy, by dane pochodziły z pliku json czy z API (zadanie dodatkowe). Ładowanie danych do bazy może chwilę potrwać. Po zakończeniu
 pojawi się plik *persons.sqlite3*:
-* pole z liczbą dni pozostałych do następnych urodzin znajduje się w tabeli 'Dob'
+* pole z liczbą dni pozostałych do następnych urodzin znajduje się w tabeli 'Dob' w kolumnie 'count_dob'
 * oczyszczone numery telefonów znajdują się w tabeli 'Person'
 * pole 'picture' zostało całkowicie usunięte z tabel (nie jest w żadnym miejscu ładowane do bazy), hasło jest w postaci plaintext
 

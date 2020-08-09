@@ -146,7 +146,6 @@ def people_by_dob_range():
     date1 = click.prompt("Provide the first date (YYYY-MM-DD)", value_proc=get_date)
     date2 = click.prompt("Provide the second date (YYYY-MM-DD)", value_proc=get_date)
 
-    # if the first date is greater than the second one, change the places of these dates
     if date1 > date2:
         flag_change = date2
         date2 = date1

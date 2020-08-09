@@ -113,12 +113,12 @@ def json_or_API():
         if decision == '1' or decision == '2':
             break
 
-    # OPEN JSON FILE AND POPULATE THE TABLES
+
     if decision == '1':
         with open('persons.json', encoding='utf8') as persons_json:
             persons = json.load(persons_json)
 
-    # OPEN API URL AND POPULATE THE TABLES
+
     elif decision == '2':
         while True:
             try:
@@ -139,17 +139,14 @@ def create_populate_table():
     """
     Function for creating and populating the database
     """
-
-    # CONNECT TO THE SQLITE DB AND CREATE TABLES
     db.connect()
     db.create_tables([Person, Name, Location, Street, Coordinates, Timezone, Login, Dob, Registered, Id])
 
-    # CHOOSE IF YOU WANT TO LOAD THE DATA FROM FILE OR API
     persons = json_or_API()
 
     print("Wait until you get a notification! This may take a while...")
 
-    # POPULATE THE DB
+
     for person in persons['results']:
         p = Person(
                     gender=person['gender'],
@@ -223,7 +220,6 @@ def create_populate_table():
                 value=person['id']['value']
                 )
 
-        # SAVE DATA
         p.save()
         n.save()
         l.save()
@@ -235,7 +231,7 @@ def create_populate_table():
         r.save()
         i.save()
 
-    # CLOSE THE DB
+
     db.close()
     print("DONE!")
 
