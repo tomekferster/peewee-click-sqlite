@@ -1,34 +1,22 @@
 # peewee-click-sqlite
 
-# Instalacja
-Oprócz pakietu [python'a](https://www.python.org/downloads/) należy zainstalować pakiety znajdujące się w pliku
-*requirements.txt*. Można tego dokonać przy użyciu cmd:
+Simple integration of OMR (peewee), command line interface (click) and database (sqlite)
+
+# Installation:
+Besides [python](https://www.python.org/downloads/) package, installation of other packages specified in *requirements.txt* is required. To do that, you can open cmd and type:
 ```bash
 pip install -r requirements.txt
 ```
-# Uruchomienie
-1. Aby utworzyć bazę danych i załadować dane, należy uruchomić w konsoli moduł *main.py*. Zostaniemy zapytani o to czy
-chcemy, by dane pochodziły z pliku json czy z API (zadanie dodatkowe). Ładowanie danych do bazy może chwilę potrwać. Po zakończeniu
-pojawi się plik *persons.sqlite3* oraz komunikat 'DONE!':
-* pole z liczbą dni pozostałych do następnych urodzin znajduje się w tabeli 'Dob' w kolumnie 'count_dob'
-* oczyszczone numery telefonów znajdują się w tabeli 'Person'
-* pole 'picture' zostało całkowicie usunięte z tabel (nie jest w żadnym miejscu ładowane do bazy), hasło jest w postaci plaintext
 
-Przed ponownym załadowaniem danych należy usunąć *persons.sqlite3*. Aby w łatwiejszy sposób pracowało się z danymi w przyszłości,
-dane zostały rozdzielone na większą ilość tabel (brak zagnieżdżeń).
+# Execution:
+1. The first step to create database and load all the data is to run *main.py* module in console. Next, the question will appear, asking whether we want the data to be loaded from json file or API. Loading the data to database may take a while. After everything is done, the file 
+*persons.sqlite3* and information 'DONE!' will appear:
 
-
-2. Aby skorzystać z komend skryptu, w cmd należy wpisać *script.py* oraz nazwę komendy i jej argument lub opcję.
-Dostępne komendy :
-*   average-age             (opcja '--gender', default='all')
-*   most-common-cities      (argument 'number', default=1)
-*   most-common-passwords   (argument 'number', default=1)
-*   most-secure-password    (brak argumentów i opcji)
+2. To use the existing script commands, open cmd and type *script.py* and the name of the command as well as its argument or option.
+Available commands:
+*   average-age             ( '--gender' option, default='all')
+*   most-common-cities      ('number' argument, default=1)
+*   most-common-passwords   ('number' argument, default=1)
+*   most-secure-password    (no arguments and options)
 *   people-by-dob-range     (user prompt)
-*   percent-by-gender       (wymagana opcja '--gender')
-
-W razie problemów z jakąkolwiek z komend, należy w cmd wprowadzić *script.py* <nazwa_komendy> --help
-
-
-
-
+*   percent-by-gender       (required option '--gender')

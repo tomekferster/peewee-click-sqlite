@@ -124,7 +124,7 @@ def json_or_API():
             try:
                 quantity = int(input('How many random people would you like to put in the DB?: '))
                 break
-            except:
+            except ValueError:
                 print("It has to be a number!")
                 continue
 

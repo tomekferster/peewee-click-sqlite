@@ -5,3 +5,4 @@ pyvenv.cfg
 __pycache__/
 persons.sqlite3
 test.py
+README_PL.md
